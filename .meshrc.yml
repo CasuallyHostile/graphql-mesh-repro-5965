@@ -10,6 +10,16 @@ sources:
     transforms:
       - namingConvention:
           fieldNames: camelCase
+  - name: Greetings
+    handler:
+      grpc:
+        endpoint: localhost:50052
+        metaData:
+          connection_type: '{context.headers.connection}'
+        source: ./proto2/service.proto
+    transforms:
+      - namingConvention:
+          fieldNames: camelCase
 
 documents:
   - example-queries/*.graphql
