@@ -9,6 +9,7 @@ sources:
         source: ./proto/service.proto
     transforms:
       - namingConvention:
+          mode: bare
           fieldNames: camelCase
   - name: Greetings
     handler:
@@ -19,6 +20,7 @@ sources:
         source: ./proto2/service.proto
     transforms:
       - namingConvention:
+          mode: bare
           fieldNames: camelCase
 
 documents:
